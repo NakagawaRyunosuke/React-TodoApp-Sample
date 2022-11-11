@@ -3,7 +3,7 @@ import React, {useState} from 'react'
 import { useTodoDispatchContext } from '../context/TodoContext'
 
 export const Item = ({todo}) => {
-    const [content, setContent] = useState("")
+    const [content, setContent] = useState(todo.content)
     const dispatch = useTodoDispatchContext()
     const complete = () => {
         dispatch({type: "todo/delete", todo: todo})
